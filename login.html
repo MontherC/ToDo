@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>login</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+         <div class="main">
+            <h1>Welcome to ToDo List</h1>
+            <div id="login">
+                <!--Add authentication here-->
+                <form action="/index.html">
+                    <legend>Login</legend>
+                    <label for="uName">Username: </label>
+                    <input type="text" id="uName" name="uName"><br><br>
+                    <label for="pwd">Password: </label>
+                    <input type="password" id="pwd" name="pwd"><br><br>
+                    <input type="submit" value="Log In">                   
+                </form>
+                <button id="showSU" onclick="signUp()">sign up</button>
+            </div>
+            <div id="signUp">
+                <!--Add authentication here-->
+                <form action="/index.html">
+                    <legend>Sign Up</legend>
+                    <label for="uName">Username: </label>
+                    <input type="text" id="uName" name="uName"><br><br>
+                    <label for="pwd">Password: </label>
+                    <input type="password" id="pwd" name="pwd"><br><br>
+                    <label for="confirmPwd">Confirm Password: </label>
+                    <input type="password" id="confirmPwd" name="confirmPwd"><br><br>
+                    <input type="submit" value="Register">
+                </form>
+                <button id="hideSU" onclick="signUp()">back</button>
+            </div>
+            <script src="js/hideshow.js"></script>
+         </div>
+    </body>
+</html>

@@ -4,24 +4,45 @@
         <meta charset="UTF-8">
         <title>To Do List</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     </head>
     <body>
-         <header id="banner">
+         <header id="banner" class="center">
             <!--Add personalization after authentication introduced-->
-            <h1 id="welcome">Welcome admin</h1>
+            <h1 id="welcome">Welcome to your list collection!</h1>
             <br>
-            <button onclick = "showModal()"><h4>+</h4></button>
+            <button id="btnNewList" data-target="listModal" class=" waves-effect waves-light btn-large btn modal-trigger">New List</button>
          </header>
          <main id="main">
-            <section id="listModal">
-                <label for="newListName"><h2>List Name</h2></label>
-                <input type="text" id="newListName" name="newListName">
-                <h4 id="lblNewContents">List contents | separate list items with a comma</h4>
-                <textarea id="newListContents" name ="newListContents" rows="10" cols ="50"></textarea><br><br>
-                <button id="btnMakeList" onclick="generateList()">Make List</button>
+            <section id="listModal" class ="modal">
+                <div class="modal-content col s4">
+                    <h4 id="lblnewListName">List Name</h4>
+                    <input class="col s4" type="text" id="newListName" name="newListName">
+                    <h4 id ="lblNewContents">List contents | Separate list items with the enter key or a comma</h4>
+                    <textarea id="newListContents" class="materialize-textarea"></textarea><br><br>
+                    <button id="btnMakeList" class ="modal-close waves-effect waves-green btn-flat" onclick="generateList()">Make List</button>
+                    <button id="btnExitModal" class="modal-close waves-effect waves-red btn-flat right ">cancel</button>
+                </div>
             </section>
-            <section id="lists"></section>
+            <section id="lists" class="row"></section>
          </main>
          <script src="js/main.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         <script>
+            //Initializes all materialize elements on dom
+            M.AutoInit();
+
+            //pulse new list btn
+             const pulseBtn = () =>{
+                var toPulse = document.getElementById("btnNewList");
+                if(toPulse.classList.contains("pulse")){
+                    toPulse.classList.remove("pulse")
+                }else{
+                    toPulse.classList.add("pulse");
+                }
+             }
+             //5 sec interval between on/off pulse
+             const pulseInterval = setInterval(pulseBtn, 5000);
+         </script>
     </body>
 </html>

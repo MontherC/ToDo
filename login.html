@@ -4,11 +4,17 @@
         <meta charset="UTF-8">
         <title>login</title>
         <link rel="stylesheet" href="css/styles.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-         <main class="main">
-            <h1>Welcome to ToDo List</h1>
-            <section id="login">
+         <main class="main container">
+            <h1 class="center-align">Welcome to ToDo List</h1>
+            <section id="login" class="col s6">
                 <!--Add authentication here-->
                 <form action="/index.html">
                     <legend>Login</legend>
@@ -16,9 +22,9 @@
                     <input type="text" id="uName" name="uName"><br><br>
                     <label for="pwd">Password: </label>
                     <input type="password" id="pwd" name="pwd"><br><br>
-                    <input type="submit" value="Log In">                   
+                    <button type="submit" class="waves-effect waves-dark white-text btn">Log In</button><br><br>            
                 </form>
-                <button id="showSU" onclick="signUp()">sign up</button>
+                <button id="showSU" class="waves-effect waves-light btn" onclick="signUp()">sign up</button>
             </section>
             <section id="signUp">
                 <!--Add authentication here-->
@@ -28,13 +34,15 @@
                     <input type="text" id="uName" name="uName"><br><br>
                     <label for="pwd">Password: </label>
                     <input type="password" id="pwd" name="pwd"><br><br>
+                    <!--Create password validation-->
                     <label for="confirmPwd">Confirm Password: </label>
                     <input type="password" id="confirmPwd" name="confirmPwd"><br><br>
-                    <input type="submit" value="Register">
+                    <button type="submit" class="waves-effect waves-dark white-text btn">Register</button><br><br>
                 </form>
-                <button id="hideSU" onclick="signUp()">back</button>
+                <button id="hideSU" class ="waves-effect waves-light btn" onclick="signUp()">back</button>
             </section>
             <script src="js/hideshow.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         </main>
     </body>
 </html>

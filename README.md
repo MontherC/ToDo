@@ -8,5 +8,5 @@ Technologies:
     -Javascript
     -HTML
     -CSS
-    -Materialize CSS
+    -Materialize
     -(More to be decided)

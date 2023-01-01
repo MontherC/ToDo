@@ -6,7 +6,17 @@ modal.style.display = "none";
 const generateList = () =>{
     //get the title of the list from the input box
     var title = document.getElementById("newListName").value;
-    //create an array of list item separated by a comma
+    const regex = /^\s*$/;
+    const exitBtn = document.getElementById("btnMakeList");
+    if(title === null || regex.test(title)){ 
+        exitBtn.classList.remove("modal-close");
+        alert("Title cannot be empty, please try again");
+        return;
+    }else{
+        exitBtn.classList.add("modal-close");
+
+    }
+    //create an array of list item separated by a comma or a line break
     var listData = document.getElementById("newListContents").value.split(/[,\r\n]+/);
     //temporary id scrambler until proper storage is implemented
     var random = Math.random();

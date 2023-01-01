@@ -3,10 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>To Do List</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="static/stylesheets/styles.css">
+        <link rel="stylesheet" href="static/stylesheets/materialize.css"">
     </head>
     <body>
+        <nav>
+            <nav class="nav-wrapper">
+                <a href="https://github.com/hhcybersquad/ToDo" target="_blank" class="brand-logo">Cybersquad</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </nav>
+        </nav>
          <header id="banner" class="center">
             <!--Add personalization after authentication introduced-->
             <h1 id="welcome">Welcome to your list collection!</h1>
@@ -26,7 +34,7 @@
             </section>
             <section id="lists" class="row"></section>
          </main>
-         <script src="js/main.js"></script>
+         <script src="static/javascripts/main.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
          <script>
             //Initializes all materialize elements on dom

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>login</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS -->
@@ -16,7 +16,7 @@
             <h1 class="center-align">Welcome to ToDo List</h1>
             <section id="login" class="col s6">
                 <!--Add authentication here-->
-                <form action="/index.html">
+                <form action="/home">
                     <legend>Login</legend>
                     <label for="uName">Username: </label>
                     <input type="text" id="uName" name="uName" required><br><br>
@@ -28,7 +28,7 @@
             </section>
             <section id="signUp">
                 <!--Add authentication here-->
-                <form action="/index.html">
+                <form action="/home">
                     <legend>Sign Up</legend>
                     <label for="uName">Username: </label>
                     <input type="text" id="uName" name="uName"required><br><br>
@@ -41,7 +41,7 @@
                 </form>
                 <button id="hideSU" class ="waves-effect waves-light btn" onclick="signUp()">back</button>
             </section>
-            <script src="js/hideshow.js"></script>
+            <script src="/static/javascripts/hideshow.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         </main>
     </body>

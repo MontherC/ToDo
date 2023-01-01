@@ -9,4 +9,5 @@ Technologies:
     -HTML
     -CSS
     -Materialize
-    -(More to be decided)
+    -Node Js
+    -Express Js
